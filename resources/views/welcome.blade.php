@@ -6,7 +6,17 @@
     <div class="row g-4">
         <div class="col">
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, delectus ad esse illum omnis earum eligendi sint a minus quasi, inventore nulla autem. Maxime voluptatem eligendi veniam voluptates. Soluta, sunt!</p>
+                @foreach ($train as $element)
+                    <div>
+                        {{$element->company}}
+                        {{$element->departure_station}}
+                        {{$element->arrival_station}}
+                        {{$element->departure_time}}
+                        {{$element->arrival_time}}
+                        {{$element->train_codes}}
+                        {{$element->train_wagon}}
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

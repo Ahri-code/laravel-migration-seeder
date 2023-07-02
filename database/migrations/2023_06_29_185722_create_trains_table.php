@@ -22,8 +22,8 @@ return new class extends Migration
             $table->time('arrival_time');
             $table->string('train_codes', 10);
             $table->unsignedTinyInteger('train_wagon');
-            $table->string('on_time', 1);
-            $table->time('delay');
+            $table->string('on_time', 1)->nullable();
+            $table->time('delay')->nullable();
 
             $table->timestamps();
         });
